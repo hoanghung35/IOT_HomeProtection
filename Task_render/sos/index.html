@@ -49,6 +49,45 @@
         <div class="sensor_chart">
             <canvas id="chart"></canvas>
         </div>
+            <!--Create buttons to control equipment-->
+                <!--Led1-->
+        <div class="equipment_Control">
+            <div id="led1">
+                <div class="led1_display">
+                    <h3><i class="fa-solid fa-lightbulb"></i> Led1</h3>
+                    <img id="myImage" src="./Imgs/bongden.jpg" alt="">
+                </div>
+
+                <div class="led1_btn">
+                    <button onclick="left()" type="button" class="btn btn-danger" id="oled1_off">OFF</button>
+                    <button onclick="right()" type="button" class="btn btn-success" id="oled1_on">ON</button>
+                </div>
+            </div>
+                    <!--Led2-->
+            <div id="led2">
+                <div class="led2_display">
+                    <h3><i class="fa-solid fa-lightbulb"></i> Led2</h3>
+                    <img id="myImage1" src="./Imgs/bongden.jpg" alt="">
+                </div>
+
+                <div class="led2_btn">
+                    <button onclick="left1()" type="button" class="btn btn-danger" id="oled2_off">OFF</button>
+                    <button onclick="right1()" type="button" class="btn btn-success" id="oled2_on">ON</button>
+                </div>
+            </div>
+                    <!--Fan-->
+            <div id="warning">
+                <div class="warning_display">
+                    <h3> Warning</h3>
+                    <img id="myImage_warning" src="./Imgs/warning0.png" alt="">
+                </div>
+
+                <div class="warning_btn">
+                    <!-- <button onclick="offMode()" type="button" class="btn btn-danger" id="warning_off">OFF</button>
+                    <button onclick="onMode()" type="button" class="btn btn-success" id="warning_on">ON</button> -->
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
