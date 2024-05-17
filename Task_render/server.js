@@ -42,7 +42,6 @@ const mqttClient = mqtt.connect(options);
 // setup the callbacks
 
 mqttClient.on('connect', () => {
-	console.log('✅ Connected to MQTT Broker');
   // Client sign up topic publish from Esp8266
 	mqttClient.subscribe('sensors', () => {
 		mqttClient.on('message', (topic, payload) => {
@@ -51,12 +50,11 @@ mqttClient.on('connect', () => {
 				temp: tmp[0],
 				hum: tmp[1],
 				gas: tmp[2],
-        smoke: tmp[3],
+        			smoke: tmp[3],
 				created_at: new Date().toLocaleString(),
-        
 			};
       
-    console.log(data);
+    //console.log(data);
     io.sockets.emit('sensorss', data);
   const newDataTemp = Math.round(data.temp);
   const newDataHumidity = Math.round(data.hum);
